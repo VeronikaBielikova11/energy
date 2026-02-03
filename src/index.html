@@ -1,23 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Your Energy</title>
+
+    <!-- DNS prefetch for API -->
+    <link rel="dns-prefetch" href="https://your-energy.b.goit.study" />
+    <link
+      rel="preconnect"
+      href="https://your-energy.b.goit.study"
+      crossorigin
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./main.js"></script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <load src="partials/header.html" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+    <main class="page">
+
+      <div class="container">
+        <load src="partials/hero.html" />
+
+        <load src="partials/filters.html" />
+
+        <div class="layout">
+          <section class="layout__content" aria-labelledby="exercises-heading">
+            <h2 id="exercises-heading" class="visually-hidden">Exercises List</h2>
+            <ul
+              id="exercises-container"
+              class="categories"
+              aria-live="polite"
+              aria-busy="false"
+            ></ul>
+            <nav id="pagination-container" aria-label="Pagination"></nav>
+          </section>
+
+          <section class="sidebar" aria-label="Additional information">
+            <load src="partials/quote.html" />
+            <load src="partials/sidebar-image.html" />
+            <load src="partials/info-card.html" />
+          </section>
+        </div>
+      </div>
     </main>
 
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="./main.js"></script>
+    <load src="partials/footer.html" />
+    <load src="partials/exercise-modal.html" />
+    <load src="partials/rating-modal.html" />
   </body>
 </html>

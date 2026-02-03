@@ -1,0 +1,217 @@
+/* ==========================================================================
+   EXERCISES (BEM Block)
+   ========================================================================== */
+.exercises {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
+  gap: 20px;
+  width: 100%;
+  list-style: none;
+}
+
+/* ==========================================================================
+   EXERCISE-CARD (BEM Block)
+   ========================================================================== */
+.exercise-card {
+  background: #fff;
+  border-radius: 15px;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.exercise-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exercise-card__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.exercise-card__badge {
+  padding: 5px 8px;
+  border: 1px solid #242424;
+  border-radius: 15px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #242424;
+}
+
+.exercise-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #242424;
+}
+
+.exercise-card__rating-star {
+  width: 18px;
+  height: 18px;
+  color: #eea10c;
+}
+
+/* Hide rating on favorites page, show delete button */
+.page--favorites .exercise-card__rating {
+  display: none;
+}
+
+.exercise-card__delete-btn {
+  display: none;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #242424;
+  line-height: 0;
+}
+
+.exercise-card__delete-btn:hover {
+  opacity: 0.7;
+}
+
+.exercise-card__delete-btn:focus {
+  outline: 2px solid #242424;
+  outline-offset: 2px;
+}
+
+.page--favorites .exercise-card__delete-btn {
+  display: flex;
+}
+
+.exercise-card__start {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #242424;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.exercise-card__start svg {
+  width: 16px;
+  height: 16px;
+}
+
+.exercise-card__body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 25px 0 16px;
+}
+
+.exercise-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #f4f4f4;
+  background-color: #242424;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.exercise-card__title {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #242424;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.exercise-card__title::first-letter {
+  text-transform: uppercase;
+}
+
+.exercise-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.exercise-card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.exercise-card__meta-label {
+  color: rgb(36, 36, 36, 0.65);
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.exercise-card__meta-value {
+  color: #242424;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.exercise-card__meta-value::first-letter {
+  text-transform: uppercase;
+}
+
+/* No results message */
+.exercises__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: rgb(36, 36, 36, 0.6);
+}
+
+/* ==========================================================================
+   TABLET (768px+)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+  .exercises {
+    gap: 32px 16px;
+  }
+
+  .exercise-card__start {
+    font-size: var(--fs-16);
+    line-height: var(--lh-24);
+  }
+
+  .exercise-card__body {
+    margin: 25px 0 8px;
+  }
+
+  .exercise-card__title {
+    font-size: var(--fs-24);
+    line-height: 30px;
+  }
+}

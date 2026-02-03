@@ -1,18 +1,36 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+/* ==========================================================================
+   Main CSS - Import Order (Mobile First)
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+   1. Foundation: normalize, fonts, variables, base
+   2. Layout: header, layout, footer
+   3. Components: hero, filters, categories, exercises, sidebar, cards, etc.
+   4. Pages: favorites
+   5. Overlays: modal
+   ========================================================================== */
+
+/* Foundation */
+/* Foundation */
+@import url('modern-normalize/modern-normalize.css');
+@import url('./base/fonts.css');
+@import url('./base/variables.css');
+@import url('./base/base.css');
+
+/* Layout */
+@import url('./layout/header.css');
+@import url('./layout/footer.css');
+@import url('./layout/sidebar.css');
+
+/* Components */
+@import url('./components/hero.css');
+@import url('./components/filters.css');
+@import url('./components/quote.css');
+@import url('./components/info-card.css');
+@import url('./components/categories.css');
+@import url('./components/exercises.css');
+@import url('./components/pagination.css');
+
+/* Pages */
+@import url('./pages/favorites.css');
+
+/* Overlays */
+@import url('./components/modal.css');

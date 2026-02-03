@@ -1,0 +1,76 @@
+<div class="modal modal--rating" id="rating-modal" aria-labelledby="rating-modal-title" aria-modal="true" role="dialog">
+  <div class="modal__backdrop"></div>
+  <div class="modal__container">
+    <button class="modal__close" id="rating-modal-close-btn" type="button" aria-label="Close rating modal">
+      <svg width="28" height="28" aria-hidden="true">
+        <use href="/img/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="modal__content">
+      <h3 class="modal__title" id="rating-modal-title">Rating</h3>
+
+      <form id="rating-form" class="rating-form">
+        <div class="rating-form__body">
+          <p class="rating-form__display-value" id="rating-display-value">0.0</p>
+
+          <fieldset class="rating-form__stars" id="rating-stars">
+            <legend class="visually-hidden">Rating</legend>
+            <label class="rating-form__star">
+              <input type="radio" name="rating" value="5" required title="Please select a rating">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/img/sprite.svg#icon-star"></use>
+              </svg>
+            </label>
+            <label class="rating-form__star">
+              <input type="radio" name="rating" value="4" required title="Please select a rating">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/img/sprite.svg#icon-star"></use>
+              </svg>
+            </label>
+            <label class="rating-form__star">
+              <input type="radio" name="rating" value="3" required title="Please select a rating">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/img/sprite.svg#icon-star"></use>
+              </svg>
+            </label>
+            <label class="rating-form__star">
+              <input type="radio" name="rating" value="2" required title="Please select a rating">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/img/sprite.svg#icon-star"></use>
+              </svg>
+            </label>
+            <label class="rating-form__star">
+              <input type="radio" name="rating" value="1" required title="Please select a rating">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="/img/sprite.svg#icon-star"></use>
+              </svg>
+            </label>
+          </fieldset>
+        </div>
+        <label for="rating-email" class="visually-hidden">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="rating-email"
+          placeholder="Email"
+          required
+          class="rating-form__input rating-form__input--email"
+          autocomplete="email"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        >
+        <label for="rating-review" class="visually-hidden">Your comment</label>
+        <textarea
+          name="review"
+          id="rating-review"
+          placeholder="Your comment"
+          class="rating-form__input rating-form__input--review"
+          rows="3"
+        ></textarea>
+        <div class="rating-form__actions">
+          <button type="submit" class="btn btn--outline">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

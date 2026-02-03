@@ -1,0 +1,267 @@
+/* ==========================================================================
+   HEADER (BEM Block) - Mobile First
+   ========================================================================== */
+
+.header {
+  background-color: var(--color-light);
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ==========================================================================
+   LOGO (BEM Block)
+   ========================================================================== */
+.logo {
+  display: block;
+}
+
+.logo__icon {
+  display: block;
+  height: 24px;
+  width: 132px;
+  color: var(--color-dark);
+  margin-top: 5px;
+}
+
+/* ==========================================================================
+   NAV (BEM Block) - Hidden on Mobile
+   ========================================================================== */
+.nav {
+  display: none;
+  background-color: var(--color-dark);
+  border-radius: 60px;
+  padding: 8px 34px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.nav__item {
+  display: flex;
+}
+
+.nav__link {
+  color: var(--color-light);
+  font-size: var(--fs-16);
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+.nav__link.active {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+/* ==========================================================================
+   SOCIALS (BEM Block) - Hidden on Mobile
+   ========================================================================== */
+.socials {
+  display: none;
+  gap: var(--gap-12);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials__item {
+  display: flex;
+}
+
+.socials__link {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gap-8);
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(36, 36, 36, 0.1);
+  border-radius: var(--radius-10);
+  transition: var(--transition);
+  flex: none;
+  background: transparent;
+}
+
+.socials__link:hover {
+  background-color: rgb(36, 36, 36, 0.8);
+}
+
+.socials__icon {
+  width: 28px;
+  height: 28px;
+  color: rgb(36, 36, 36, 0.8);
+  transition: var(--transition);
+}
+
+.socials__link:hover .socials__icon {
+  color: rgb(244, 244, 244, 1);
+}
+
+/* ==========================================================================
+   BURGER (BEM Block) - Visible on Mobile
+   ========================================================================== */
+.burger {
+  display: flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.burger__icon {
+  width: 32px;
+  height: 32px;
+  stroke: var(--color-dark);
+}
+
+/* ==========================================================================
+   MOBILE-MENU (BEM Block) - Div-based
+   ========================================================================== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none;
+}
+
+.mobile-menu.is-open {
+  display: block;
+}
+
+.mobile-menu__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--color-dark);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mobile-menu__close {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin: -8px;
+}
+
+.mobile-menu__close-icon {
+  width: 32px;
+  height: 32px;
+  stroke: var(--color-light);
+  color: var(--color-light);
+  fill: var(--color-light);
+}
+
+.mobile-menu__nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.mobile-menu__item {
+  display: flex;
+}
+
+.mobile-menu__nav-link {
+  color: var(--color-light);
+  font-size: var(--fs-14);
+  font-weight: 400;
+  line-height: var(--lh-18);
+  transition: var(--transition);
+}
+
+.mobile-menu__nav-link:hover {
+  color: rgba(244, 244, 244, 0.6);
+}
+
+.mobile-menu__nav-link.active {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.mobile-menu__socials {
+  display: flex;
+  gap: var(--gap-12);
+  justify-content: center;
+  margin-top: auto;
+  list-style: none;
+}
+
+.mobile-menu__socials .socials__item {
+  display: flex;
+}
+
+/* ==========================================================================
+   TABLET (768px+)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+  .header__container {
+    padding: 24px 32px;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .socials {
+    display: flex;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP (1440px+)
+   ========================================================================== */
+@media screen and (min-width: 1440px) {
+  .header__container {
+    padding: 32px 28px;
+  }
+}

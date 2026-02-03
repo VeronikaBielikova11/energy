@@ -1,0 +1,115 @@
+<section class="hero">
+  <div class="hero__content">
+    <div class="hero__title-wrapper">
+      <img src="/img/star-icon.svg" alt="" class="hero__star-icon">
+      <h1 class="hero__title">Get <i>Body</i> in shape, Stay healthy</h1>
+    </div>
+    <p class="hero__description">
+      Transform your physique and embrace a healthier lifestyle with our comprehensive fitness and
+      nutrition support.
+    </p>
+  </div>
+
+  <div class="hero__image-wrapper">
+    <picture>
+      <!-- Mobile: до 767px -->
+      <source
+        media="(max-width: 767px)"
+        type="image/webp"
+        srcset="
+          /img/webp/mobile-hero.webp 1x,
+          /img/webp/mobile-hero@2x.webp 2x
+        "
+      >
+      <source
+        media="(max-width: 767px)"
+        type="image/jpeg"
+        srcset="
+          /img/mobile-hero.jpg 1x,
+          /img/mobile-hero@2x.jpg 2x
+        "
+      >
+
+      <!-- Tablet: 768px - 1439px -->
+      <source
+        media="(min-width: 768px) and (max-width: 1439px)"
+        type="image/webp"
+        srcset="
+          /img/webp/tablet-hero.webp 1x,
+          /img/webp/tablet-hero@2x.webp 2x
+        "
+      >
+      <source
+        media="(min-width: 768px) and (max-width: 1439px)"
+        type="image/jpeg"
+        srcset="
+          /img/tablet-hero.jpg 1x,
+          /img/tablet-hero@2x.jpg 2x
+        "
+      >
+
+      <!-- Desktop: від 1440px -->
+      <source
+        media="(min-width: 1440px)"
+        type="image/webp"
+        srcset="
+          /img/webp/desktop-hero.webp 1x,
+          /img/webp/desktop-hero@2x.webp 2x
+        "
+      >
+      <source
+        media="(min-width: 1440px)"
+        type="image/jpeg"
+        srcset="
+          /img/desktop-hero.jpg 1x,
+          /img/desktop-hero@2x.jpg 2x
+        "
+      >
+
+      <img
+        src="/img/desktop-hero.jpg"
+        alt="Working out together"
+        class="hero__image--large"
+        width="1376"
+        height="574"
+        loading="eager"
+        fetchpriority="high"
+      >
+    </picture>
+  </div>
+
+  <div class="hero__right">
+    <picture>
+      <!-- Desktop: від 1440px (на mobile та tablet hero-right не відображається) -->
+      <source
+        type="image/webp"
+        srcset="
+          /img/webp/desktop-hero-tag.webp 1x,
+          /img/webp/desktop-hero-tag@2x.webp 2x
+        "
+      >
+      <source
+        type="image/jpeg"
+        srcset="
+          /img/desktop-hero-tag.jpg 1x,
+          /img/desktop-hero-tag@2x.jpg 2x
+        "
+      >
+
+      <img
+        src="/img/desktop-hero-tag.jpg"
+        alt="Workout"
+        class="hero__image--small"
+        width="168"
+        height="100"
+        loading="eager"
+      >
+    </picture>
+    <ul class="hero__tags">
+      <li class="hero__tag">#Sport</li>
+      <li class="hero__tag">#Healthy</li>
+      <li class="hero__tag">#Workout</li>
+      <li class="hero__tag">#Diet</li>
+    </ul>
+  </div>
+</section>
